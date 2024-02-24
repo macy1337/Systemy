@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-long oblicz(string liczba, int p)
+long Oblicz(string liczba, int p)
 {
     int suma = 0;
     int check = liczba[0] * 1;
@@ -29,6 +29,6 @@ long oblicz(string liczba, int p)
 int main()
 {
     string liczba = "AB34";
-    cout << oblicz(liczba, 16) << endl;
+    cout << Oblicz(liczba, 16) << endl;
     return 0;
 }
