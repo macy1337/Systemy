@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+string Zamiana(int liczba, int system)
+{
+    string T[] = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"};
+    string wynik = "";
+    int reszta;
+    do
+    {
+        reszta = liczba % system;
+        wynik = T[reszta] + wynik;
+        liczba /= system;
+    } while (liczba > 0);
+    return wynik;
+}
+
+int main()
+{
+    int liczba = 29;
+    cout << Zamiana(liczba, 2) << endl;
+    return 0;
+}
