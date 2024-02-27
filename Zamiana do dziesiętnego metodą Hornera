@@ -1,29 +1,29 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
-long Zamiana(string liczba, int p)
+int Zamiana(string liczba, int system)
 {
-    int suma = 0;
-    int check = liczba[0] * 1;
-    int b = 0;
-    if (check >= 48 and check <= 57)
-        suma = check - 48;
-    if (65 <= check and check <= 90)
-        suma = check - 55;
-    if (check >= 97 and check <= 122)
-        suma = check - 87;
+    int w;
+    int b;
+    int a = liczba[0] * 1;
+    if (a >= 48 and a <= 57)
+        w = a - 48;
+    if (a >= 65 and a <= 90)
+        w = a - 55;
+    if (a >= 97 and a <= 122)
+        w = a - 87;
     for (int i = 1; i < liczba.size(); i++)
     {
-        if (48 <= liczba[i] and liczba[i] <= 57)
-            b = liczba[i] - 48;
-        if (65 <= liczba[i] and liczba[i] <= 90)
-            b = liczba[i] - 55;
-        if (97 <= liczba[i] and liczba[i] <= 122)
-            b = liczba[i] - 87;
-        suma = suma * p + b;
+        b = liczba[i] * 1;
+        if (b >= 48 and b <= 57)
+            b = b - 48;
+        if (b >= 65 and b <= 90)
+            b = b - 55;
+        if (b >= 97 and b <= 122)
+            b = b - 87;
+        w = w * system + b;
     }
-    return suma;
+    return w;
 }
 
 int main()
