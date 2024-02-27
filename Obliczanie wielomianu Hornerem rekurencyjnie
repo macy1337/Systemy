@@ -1,17 +1,17 @@
 #include <iostream>
 using namespace std;
 
-int Horner(int W[], int x, int n)
+int Wielomian(int W[], int x, int n)
 {
     if (n == 0) return W[0];
-    else return Horner(W, x, n - 1) * x + W[n];
+    else return Wielomian(W, x, n - 1) * x + W[n];
 }
 
 int main()
 {
     int W[] = {2, 4, -3, 7}; //współczynniki wielomianu
     int n = sizeof(W) / sizeof(W[0]) - 1; //stopień wielomianu
-    int x = 3; //liczbą, którą chcemy podstawić pod x
-    cout << Horner(W, x, n) << endl;
+    int x = 3; //liczba, którą chcemy podstawić pod x
+    cout << Wielomian(W, x, n) << endl;
     return 0;
 }
