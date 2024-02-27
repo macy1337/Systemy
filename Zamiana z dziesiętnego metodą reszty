@@ -17,7 +17,8 @@ string Zamiana(int liczba, int system)
 
 int main()
 {
-    int liczba = 29;
-    cout << Zamiana(liczba, 2) << endl;
+    int liczba = 2676;
+    int system = 16;
+    cout << Zamiana(liczba, system) << endl;
     return 0;
 }
