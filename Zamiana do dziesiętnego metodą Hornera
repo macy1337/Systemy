@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-long Oblicz(string liczba, int p)
+long Zamiana(string liczba, int p)
 {
     int suma = 0;
     int check = liczba[0] * 1;
@@ -29,6 +29,7 @@ long Oblicz(string liczba, int p)
 int main()
 {
     string liczba = "AB34";
-    cout << Oblicz(liczba, 16) << endl;
+    int system = 16;
+    cout << Zamiana(liczba, system) << endl;
     return 0;
 }
