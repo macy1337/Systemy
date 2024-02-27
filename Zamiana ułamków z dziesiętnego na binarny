@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+string Zamiana(float liczba)
+{
+    string wynik = "0.";
+    while (liczba != 1.0)
+    {
+        if (liczba * 2 < 1.0)
+        {
+            wynik = wynik + "0";
+            liczba = liczba * 2;
+            if (liczba > 1.0) liczba = liczba - 1;
+        }
+        else
+        {
+            wynik = wynik + "1";
+            liczba = liczba * 2 - 1;
+            if (liczba == 0) liczba = 1.0;
+        }
+    }
+    return wynik;
+}
+
+int main()
+{
+    float liczba = 0.78125;
+    cout << Zamiana(liczba) << endl;
+    return 0;
+}
